@@ -18,19 +18,21 @@
 #   lukewaite, Luke Waite
 
 createPostData = (imageID, lowerText, upperText) ->
+  lower = lowerText ? lowerText.trim() : null
+	upper = upperText ? upperText.trim() : null
   data = {
     src_image_id: imageID,
     private: true,
     captions_attributes: [
       {
-        text: lowerText.trim(),
+        text: lower,
         top_left_x_pct: 0.05,
         top_left_y_pct: 0.75,
         width_pct: 0.9,
         height_pct: 0.25
       },
       {
-        text: upperText.trim(),
+        text: upper,
         top_left_x_pct: 0.05,
         top_left_y_pct: 0,
         width_pct: 0.9,
