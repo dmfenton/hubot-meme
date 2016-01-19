@@ -33,6 +33,7 @@
 #   hubot khanify <text> - Meme: Has Shatner yell your phrase
 #   hubot pun | bad joke eel <text>? <text> - Meme: Bad joke eel
 #   hubot pun | bad joke eel <text> / <text> - Meme: Bad joke eel
+#   hubot it's a trap - Meme: Admiral Ackbar
 # Author:
 #   bobanj
 #   cycomachead, Michael Ball <cycomachead@gmail.com>
@@ -140,4 +141,7 @@ module.exports = (robot) ->
 
   robot[listen_func] /(?:bad joke eel|pun)(.+\?) (.+)/i, id: 'meme.bad-joke-eel', (msg) ->
     memeGenerator msg, 'R35VNw', msg.match[1], msg.match[2]
+    
+  robot[listen_func] /it'?s a trap/i, id: 'meme.bad-joke-eel', (msg) ->
+    memeGenerator msg, 'BMFeUQ', msg.match[1], msg.match[2]
 
