@@ -18,8 +18,8 @@
 #   lukewaite, Luke Waite
 
 createPostData = (imageID, lowerText, upperText) ->
-  lower = lowerText ? lowerText.trim() : null
-	upper = upperText ? upperText.trim() : null
+  lower = if lowerText then lowerText.trim() else null
+  upper = if upperText then upperText.trim() else null
   data = {
     src_image_id: imageID,
     private: true,
