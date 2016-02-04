@@ -71,7 +71,7 @@ module.exports = (robot) ->
   robot[listen_func] /(.*) (\w+\sTOO DAMN .*)/i, id: 'meme.too-damn-high', (msg) ->
     memeGenerator msg, 'RCkv6Q', msg.match[1], msg.match[2]
 
-  robot[listen_func] /(NOT SURE IF .*) (OR .*)/i, id: 'meme.not-sure-fry', (msg) ->
+  robot[listen_func] /^(NOT SURE IF .*) (OR .*)/i, id: 'meme.not-sure-fry', (msg) ->
     memeGenerator msg, 'CsNF8w', msg.match[1], msg.match[2]
 
   robot[listen_func] /(YO DAWG .*) (SO .*)/i, id: 'meme.yo-dawg', (msg) ->
