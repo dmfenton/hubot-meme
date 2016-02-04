@@ -142,5 +142,5 @@ module.exports = (robot) ->
   robot[listen_func] /(?:bad joke eel|pun)(.+\?) (.+)/i, id: 'meme.bad-joke-eel', (msg) ->
     memeGenerator msg, 'R35VNw', msg.match[1], msg.match[2]
 
-  robot[listen_func] /(.+)?it'?s a trap/i, id: 'meme.ackbar', (msg) ->
+  robot[listen_func] /(.*)\s?it'?s a trap$/i, id: 'meme.ackbar', (msg) ->
     memeGenerator msg, 'P7rwAg', msg.match[1], "IT'S A TRAP!!!"
