@@ -95,7 +95,7 @@ module.exports = (robot) ->
   robot[listen_func] /(.*)TROLLFACE(.*)/i, id: 'meme.trollface', (msg) ->
     memeGenerator msg, 'mEK-TA', msg.match[1], msg.match[2]
 
-  robot[listen_func] /(IF .*), ((ARE|CAN|DO|DOES|HOW|IS|MAY|MIGHT|SHOULD|THEN|WHAT|WHEN|WHERE|WHICH|WHO|WHY|WILL|WON\'T|WOULD)[ \'N].*)/i, id: 'meme.philosoraptor', (msg) ->
+  robot[listen_func] /^(IF .*), ((ARE|CAN|DO|DOES|HOW|IS|MAY|MIGHT|SHOULD|THEN|WHAT|WHEN|WHERE|WHICH|WHO|WHY|WILL|WON\'T|WOULD)[ \'N].*)\?$/i, id: 'meme.philosoraptor', (msg) ->
     memeGenerator msg, '-kFVmQ', msg.match[1], msg.match[2] + (if msg.match[2].search(/\?$/)==(-1) then '?' else '')
 
   robot[listen_func] /(.*)(A+ND IT\'S GONE.*)/i, id: 'meme.its-gone', (msg) ->
@@ -142,5 +142,5 @@ module.exports = (robot) ->
   robot[listen_func] /(?:bad joke eel|pun)(.+\?) (.+)/i, id: 'meme.bad-joke-eel', (msg) ->
     memeGenerator msg, 'R35VNw', msg.match[1], msg.match[2]
 
-  robot[listen_func] /it'?s a trap/i, id: 'meme.ackbar', (msg) ->
+  robot[listen_func] /(.+)?it'?s a trap/i, id: 'meme.ackbar', (msg) ->
     memeGenerator msg, 'P7rwAg', msg.match[1], "IT'S A TRAP!!!"
