@@ -147,4 +147,4 @@ module.exports = (robot) ->
     memeGenerator msg, 'P7rwAg', msg.match[1], "IT'S A TRAP!!!"
     
   robot[listen_func] /(.*)\s?make it so\.?$/i, id: 'meme.picard', (msg) ->
-    memeGenerator msg, 'nN4vmg', msg.match[1], "Make it so."
+    memeGenerator msg, '71FQBQ', msg.match[1], "Make it so."
