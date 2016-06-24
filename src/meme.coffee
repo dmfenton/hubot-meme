@@ -35,6 +35,7 @@
 #   hubot pun | bad joke eel <text> / <text> - Meme: Bad joke eel
 #   hubot it's a trap - Meme: Admiral Ackbar
 #   hubot hulk smash - Meme: The hulk smashing
+#   hubot make it so - Meme: Captain Picard
 # Author:
 #   bobanj
 #   cycomachead, Michael Ball <cycomachead@gmail.com>
@@ -143,8 +144,14 @@ module.exports = (robot) ->
   robot[listen_func] /(?:bad joke eel|pun)(.+\?) (.+)/i, id: 'meme.bad-joke-eel', (msg) ->
     memeGenerator msg, 'R35VNw', msg.match[1], msg.match[2]
 
-  robot[listen_func] /(.*)\s?it'?s a trap$/i, id: 'meme.ackbar', (msg) ->
+  robot[listen_func] /(.*)[\,\.\;]?\s?it'?s a trap\!?$/i, id: 'meme.ackbar', (msg) ->
     memeGenerator msg, 'P7rwAg', msg.match[1], "IT'S A TRAP!!!"
 
   robot[listen_func] /^hulk\ssmash\s(.+)$/i, id: 'meme.smash', (msg) ->
     memeGenerator msg, 'yhygGg', "HULK SMASH", msg.match[1]
+
+  robot[listen_func] /(.*)[\,\.\;]?\s?make it so(\.|!)?$/i, id: 'meme.picard', (msg) ->
+    memeGenerator msg, '71FQBQ', msg.match[1], "Make it so."
+
+  robot[listen_func] /MOAR COFFEE/i, id: 'meme.picard', (msg) ->
+    memeGenerator msg, 'Zc1ZKw', "MOAR", "COFFEE!!!!!!"
