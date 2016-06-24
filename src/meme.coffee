@@ -34,6 +34,7 @@
 #   hubot pun | bad joke eel <text>? <text> - Meme: Bad joke eel
 #   hubot pun | bad joke eel <text> / <text> - Meme: Bad joke eel
 #   hubot it's a trap - Meme: Admiral Ackbar
+#   hubot hulk smash - Meme: The hulk smashing
 # Author:
 #   bobanj
 #   cycomachead, Michael Ball <cycomachead@gmail.com>
@@ -144,3 +145,6 @@ module.exports = (robot) ->
 
   robot[listen_func] /(.*)\s?it'?s a trap$/i, id: 'meme.ackbar', (msg) ->
     memeGenerator msg, 'P7rwAg', msg.match[1], "IT'S A TRAP!!!"
+
+  robot[listen_func] /^hulk\ssmash\s(.+)$/i, id: 'meme.smash', (msg) ->
+    memeGenerator msg, 'yhygGg', "HULK SMASH", msg.match[1]
