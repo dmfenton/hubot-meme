@@ -155,3 +155,6 @@ module.exports = (robot) ->
 
   robot[listen_func] /MOAR COFFEE/i, id: 'meme.picard', (msg) ->
     memeGenerator msg, 'Zc1ZKw', "MOAR", "COFFEE!!!!!!"
+  
+  robot[listen_func] /shame/i, id: 'meme.shame', (msg) ->
+    memeGenerator msg, 'z872dg', "", ""
