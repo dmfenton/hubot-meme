@@ -61,7 +61,7 @@ module.exports = (robot) ->
   robot[listen_func] /brace yourself (.+)/i, id: 'meme.brace-yourself', (msg) ->
     memeGenerator msg, '_I74XA', 'Brace Yourself', msg.match[1]
 
-  robot[listen_func] /(.+) (ALL THE \w+)$/, id: 'meme.all-the-things', (msg) ->
+  robot[listen_func] /(.+) (ALL THE THINGS)/, id: 'meme.all-the-things', (msg) ->
     memeGenerator msg, 'Dv99KQ', msg.match[1], msg.match[2]
 
   robot[listen_func] /(I DON'?T ALWAYS .*) (BUT WHEN I DO,? .*)/i, id: 'meme.interesting-man', (msg) ->
