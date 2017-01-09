@@ -36,6 +36,7 @@
 #   hubot it's a trap - Meme: Admiral Ackbar
 #   hubot hulk smash - Meme: The hulk smashing
 #   hubot make it so - Meme: Captain Picard
+#   hubot WRONG - Meme: Orange Voldemort
 # Author:
 #   bobanj
 #   cycomachead, Michael Ball <cycomachead@gmail.com>
@@ -158,3 +159,6 @@ module.exports = (robot) ->
   
   robot[listen_func] /shame/i, id: 'meme.shame', (msg) ->
     memeGenerator msg, 'z872dg', "", ""
+    
+  robot[listen_func] /WRONG/, id: 'meme.WRONG', (msg) ->
+    memeGenerator msg, 'C869WA', "WRONG!!!", ""
