@@ -165,4 +165,4 @@ module.exports = (robot) ->
     memeGenerator msg, 'C869WA', "WRONG!!!", ""
 
   robot[listen_func] /w*\. (period|Period)./, id: 'meme.spicer', (msg) ->
-    memeGenerator msg, 'qbsxhA', msg, ""
+    memeGenerator msg, 'Aaegrg', msg, ""
