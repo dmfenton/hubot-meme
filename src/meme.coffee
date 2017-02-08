@@ -37,6 +37,7 @@
 #   hubot hulk smash - Meme: The hulk smashing
 #   hubot make it so - Meme: Captain Picard
 #   hubot WRONG - Meme: Orange Voldemort
+#   hubot <text>. (period|Period). - Meme: #SpicerFacts
 # Author:
 #   bobanj
 #   cycomachead, Michael Ball <cycomachead@gmail.com>
@@ -154,7 +155,7 @@ module.exports = (robot) ->
   robot[listen_func] /(.*)[\,\.\;]?\s?make it so(\.|!)?$/i, id: 'meme.picard', (msg) ->
     memeGenerator msg, '71FQBQ', msg.match[1], "Make it so."
 
-  robot[listen_func] /MOAR COFFEE/i, id: 'meme.picard', (msg) ->
+  robot[listen_func] /MOAR COFFEE/i, id: 'meme.coffee', (msg) ->
     memeGenerator msg, 'Zc1ZKw', "MOAR", "COFFEE!!!!!!"
   
   robot[listen_func] /shame/i, id: 'meme.shame', (msg) ->
@@ -162,3 +163,6 @@ module.exports = (robot) ->
     
   robot[listen_func] /WRONG/, id: 'meme.WRONG', (msg) ->
     memeGenerator msg, 'C869WA', "WRONG!!!", ""
+
+  robot[listen_func] /w*\. (period|Period)./, id: 'meme.spicer', (msg) ->
+    memeGenerator msg, 'qbsxhA', msg, ""
