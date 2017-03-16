@@ -38,6 +38,7 @@
 #   hubot make it so - Meme: Captain Picard
 #   hubot WRONG - Meme: Orange Voldemort
 #   hubot <text>. (period|Period). - Meme: #SpicerFacts
+#   hubot not (gonna|going to) do it. - Meme: George Bush Not Gonna Do It
 # Author:
 #   bobanj
 #   cycomachead, Michael Ball <cycomachead@gmail.com>
@@ -166,3 +167,6 @@ module.exports = (robot) ->
 
   robot[listen_func] /(.+)period[.]?$/i, id: 'meme.spicer', (msg) ->
     memeGenerator msg, 'Aaegrg', msg.match[1], "PERIOD."
+    
+  robot[listen_func] /not (gonna|going to) do it/i, id: 'meme.bush', (msg) ->
+    msg.send 'http://i.imgur.com/ybFghGD.gif'
