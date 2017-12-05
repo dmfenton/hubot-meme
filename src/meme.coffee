@@ -52,6 +52,9 @@ listen_func = if process.env.HUBOT_EXTRA_MEMES then 'hear' else 'respond'
 memeGenerator = require "./lib/memecaptain.coffee"
 
 module.exports = (robot) ->
+  robot[listen_func] /excellent/i, id: 'meme.excellent', (msg) ->
+    memeGenerator msg, 'GhLBeQ', "", ""
+
   robot[listen_func] /Y U NO (.+)/i, id: 'meme.y-u-no', (msg) ->
     memeGenerator msg, 'NryNmg', 'Y U NO', msg.match[1]
 
